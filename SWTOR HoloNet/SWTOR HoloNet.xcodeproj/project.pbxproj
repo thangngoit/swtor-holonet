@@ -319,6 +319,18 @@
 		81EE90921A0779DC00A88F48 /* ForumPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EE90901A0779DC00A88F48 /* ForumPostViewController.swift */; };
 		81FB846E1AF90A2F00D51684 /* HTMLElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FB846D1AF90A2F00D51684 /* HTMLElement.swift */; };
 		81FB846F1AF90A2F00D51684 /* HTMLElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FB846D1AF90A2F00D51684 /* HTMLElement.swift */; };
+		81FC493F1B2EEF370006D8E8 /* ForumFragmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC493E1B2EEF370006D8E8 /* ForumFragmentType.swift */; };
+		81FC49401B2EEF370006D8E8 /* ForumFragmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC493E1B2EEF370006D8E8 /* ForumFragmentType.swift */; };
+		81FC49421B2EEF610006D8E8 /* ForumFragmentBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC49411B2EEF610006D8E8 /* ForumFragmentBase.swift */; };
+		81FC49431B2EEF610006D8E8 /* ForumFragmentBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC49411B2EEF610006D8E8 /* ForumFragmentBase.swift */; };
+		81FC49451B2EEFA80006D8E8 /* ForumFragmentText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC49441B2EEFA80006D8E8 /* ForumFragmentText.swift */; };
+		81FC49461B2EEFA80006D8E8 /* ForumFragmentText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC49441B2EEFA80006D8E8 /* ForumFragmentText.swift */; };
+		81FC49481B2EF0A80006D8E8 /* ForumFragmentQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC49471B2EF0A80006D8E8 /* ForumFragmentQuote.swift */; };
+		81FC49491B2EF0A80006D8E8 /* ForumFragmentQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC49471B2EF0A80006D8E8 /* ForumFragmentQuote.swift */; };
+		81FC494B1B2EF1130006D8E8 /* ForumFragmentLineBreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC494A1B2EF1130006D8E8 /* ForumFragmentLineBreak.swift */; };
+		81FC494C1B2EF1130006D8E8 /* ForumFragmentLineBreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC494A1B2EF1130006D8E8 /* ForumFragmentLineBreak.swift */; };
+		81FC494E1B2EF7430006D8E8 /* ForumFragmentSpoiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC494D1B2EF7430006D8E8 /* ForumFragmentSpoiler.swift */; };
+		81FC494F1B2EF7430006D8E8 /* ForumFragmentSpoiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC494D1B2EF7430006D8E8 /* ForumFragmentSpoiler.swift */; };
 		81FDCC8C1A6EC37900E2C44A /* Disclaimer.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81FDCC891A6EC37900E2C44A /* Disclaimer.txt */; };
 		81FDCC8D1A6EC37900E2C44A /* Disclaimer.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81FDCC891A6EC37900E2C44A /* Disclaimer.txt */; };
 		81FDCC8E1A6EC37900E2C44A /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81FDCC8A1A6EC37900E2C44A /* License.txt */; };
@@ -620,6 +632,12 @@
 		81EC0C131A44896F00AFA035 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewController.swift; path = Module/App/UI/TextViewController.swift; sourceTree = "<group>"; };
 		81EE90901A0779DC00A88F48 /* ForumPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumPostViewController.swift; path = Module/Forum/UI/ForumPostViewController.swift; sourceTree = "<group>"; };
 		81FB846D1AF90A2F00D51684 /* HTMLElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTMLElement.swift; path = Extension/HTMLElement.swift; sourceTree = "<group>"; };
+		81FC493E1B2EEF370006D8E8 /* ForumFragmentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumFragmentType.swift; path = Module/Forum/Model/Fragments/ForumFragmentType.swift; sourceTree = "<group>"; };
+		81FC49411B2EEF610006D8E8 /* ForumFragmentBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumFragmentBase.swift; path = Module/Forum/Model/Fragments/ForumFragmentBase.swift; sourceTree = "<group>"; };
+		81FC49441B2EEFA80006D8E8 /* ForumFragmentText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumFragmentText.swift; path = Module/Forum/Model/Fragments/ForumFragmentText.swift; sourceTree = "<group>"; };
+		81FC49471B2EF0A80006D8E8 /* ForumFragmentQuote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumFragmentQuote.swift; path = Module/Forum/Model/Fragments/ForumFragmentQuote.swift; sourceTree = "<group>"; };
+		81FC494A1B2EF1130006D8E8 /* ForumFragmentLineBreak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumFragmentLineBreak.swift; path = Module/Forum/Model/Fragments/ForumFragmentLineBreak.swift; sourceTree = "<group>"; };
+		81FC494D1B2EF7430006D8E8 /* ForumFragmentSpoiler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumFragmentSpoiler.swift; path = Module/Forum/Model/Fragments/ForumFragmentSpoiler.swift; sourceTree = "<group>"; };
 		81FDCC891A6EC37900E2C44A /* Disclaimer.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Disclaimer.txt; path = Resource/Disclaimer.txt; sourceTree = "<group>"; };
 		81FDCC8A1A6EC37900E2C44A /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = License.txt; path = Resource/License.txt; sourceTree = "<group>"; };
 		81FDCC8B1A6EC37900E2C44A /* PrivacyPolicy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PrivacyPolicy.txt; path = Resource/PrivacyPolicy.txt; sourceTree = "<group>"; };
@@ -1193,6 +1211,7 @@
 		81AB24A619EFC19C00293D26 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				81FC493A1B2EEEE40006D8E8 /* Fragments */,
 				81AB24DC19EFD2CE00293D26 /* ForumLanguage.swift */,
 				81AB24A719EFC21100293D26 /* ForumCategory.swift */,
 				81AB24AA19EFC3FD00293D26 /* ForumThread.swift */,
@@ -1393,6 +1412,19 @@
 				81E62D061AA44AB0006FA0F9 /* DulfyViewControllerTests.swift */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		81FC493A1B2EEEE40006D8E8 /* Fragments */ = {
+			isa = PBXGroup;
+			children = (
+				81FC49411B2EEF610006D8E8 /* ForumFragmentBase.swift */,
+				81FC494A1B2EF1130006D8E8 /* ForumFragmentLineBreak.swift */,
+				81FC49471B2EF0A80006D8E8 /* ForumFragmentQuote.swift */,
+				81FC494D1B2EF7430006D8E8 /* ForumFragmentSpoiler.swift */,
+				81FC49441B2EEFA80006D8E8 /* ForumFragmentText.swift */,
+				81FC493E1B2EEF370006D8E8 /* ForumFragmentType.swift */,
+			);
+			name = Fragments;
 			sourceTree = "<group>";
 		};
 		81FDCC881A6EC31500E2C44A /* Resource */ = {
@@ -1603,6 +1635,7 @@
 				81964D8B1AAED73D008CA544 /* ActionParser.swift in Sources */,
 				8157932B1AA0BD9700C62E87 /* WebViewEx.swift in Sources */,
 				81AB24D119EFCAC000293D26 /* AFURLConnectionOperation.m in Sources */,
+				81FC49421B2EEF610006D8E8 /* ForumFragmentBase.swift in Sources */,
 				8129B3371AADB18B004D8774 /* DulfyAction.swift in Sources */,
 				81255D8A19F7BBD600E0C018 /* UIImage+WebP.m in Sources */,
 				8146BF0D1ABC9EE3002DB6D3 /* ForumThreadCollectionViewController.swift in Sources */,
@@ -1615,11 +1648,14 @@
 				81DBE59A1AF779AA00F93483 /* HTMLEncoding.m in Sources */,
 				81846CA21ABC45E500982C2C /* LoadMoreCollectionReusableView.swift in Sources */,
 				81C070B01ABB010E00B70A06 /* ForumListCollectionViewController.swift in Sources */,
+				81FC494B1B2EF1130006D8E8 /* ForumFragmentLineBreak.swift in Sources */,
 				81DD07E31AA3299500278130 /* UIAlertFactory.swift in Sources */,
+				81FC49451B2EEFA80006D8E8 /* ForumFragmentText.swift in Sources */,
 				81EC0C111A4465EA00AFA035 /* TableViewCell+Themeable.swift in Sources */,
 				8120F28019FFB2E200C02DF8 /* Range.swift in Sources */,
 				810D2E041A44457800FF0FEF /* SettingsTableViewController.swift in Sources */,
 				8120F27E19FFB2E200C02DF8 /* NSArray.swift in Sources */,
+				81FC493F1B2EEF370006D8E8 /* ForumFragmentType.swift in Sources */,
 				81AA50091A42C7EF009ECE33 /* InstanceHolder.swift in Sources */,
 				81A49A9819F0FCC0007FEA4C /* HTMLTreeEnumerator.m in Sources */,
 				81DD07DF1AA3299500278130 /* Alert.swift in Sources */,
@@ -1632,6 +1668,7 @@
 				81255D7419F7BBD600E0C018 /* NSData+ImageContentType.m in Sources */,
 				8120F26419FFB01A00C02DF8 /* Entity.swift in Sources */,
 				81AB24CD19EFCAC000293D26 /* AFNetworkReachabilityManager.m in Sources */,
+				81FC49481B2EF0A80006D8E8 /* ForumFragmentQuote.swift in Sources */,
 				815B211619F3A2B900B9E725 /* ForumPostRepository.swift in Sources */,
 				81255D7219F7BBD600E0C018 /* MKAnnotationView+WebCache.m in Sources */,
 				81FB846E1AF90A2F00D51684 /* HTMLElement.swift in Sources */,
@@ -1640,6 +1677,7 @@
 				81AB24D719EFCAC000293D26 /* AFURLSessionManager.m in Sources */,
 				816567201A40394F002AA53A /* Theme.swift in Sources */,
 				81A49A8619F0FCC0007FEA4C /* HTMLNode.m in Sources */,
+				81FC494E1B2EF7430006D8E8 /* ForumFragmentSpoiler.swift in Sources */,
 				81255D8E19F7BBD600E0C018 /* UIImageView+WebCache.m in Sources */,
 				8120F27219FFB2E200C02DF8 /* Array.swift in Sources */,
 				81DD07DA1AA3299500278130 /* AlertIOS7.swift in Sources */,
@@ -1716,6 +1754,7 @@
 				81846C9D1ABC451500982C2C /* TableHeaderCollectionReusableView.swift in Sources */,
 				81255D7D19F7BBD600E0C018 /* SDWebImageDownloader.m in Sources */,
 				81255D8B19F7BBD600E0C018 /* UIImage+WebP.m in Sources */,
+				81FC494C1B2EF1130006D8E8 /* ForumFragmentLineBreak.swift in Sources */,
 				81DD07FC1AA32AE600278130 /* DelegateBaseTests.swift in Sources */,
 				81FB846F1AF90A2F00D51684 /* HTMLElement.swift in Sources */,
 				81A49A7D19F0FCC0007FEA4C /* HTMLComment.m in Sources */,
@@ -1729,6 +1768,7 @@
 				8138BACA1AB02D2A0045A93E /* ActionFactoryTests.swift in Sources */,
 				81A49A8519F0FCC0007FEA4C /* HTMLEntities.m in Sources */,
 				81255D7F19F7BBD600E0C018 /* SDWebImageDownloaderOperation.m in Sources */,
+				81FC494F1B2EF7430006D8E8 /* ForumFragmentSpoiler.swift in Sources */,
 				81A49A8319F0FCC0007FEA4C /* HTMLElement.m in Sources */,
 				810D2E051A44457800FF0FEF /* SettingsTableViewController.swift in Sources */,
 				81DD07E41AA32A7200278130 /* AlertIOS7.swift in Sources */,
@@ -1748,10 +1788,12 @@
 				81A49A9119F0FCC0007FEA4C /* HTMLSerialization.m in Sources */,
 				81255D7319F7BBD600E0C018 /* MKAnnotationView+WebCache.m in Sources */,
 				812B428D1A08CB7700302649 /* StringExTests.swift in Sources */,
+				81FC49491B2EF0A80006D8E8 /* ForumFragmentQuote.swift in Sources */,
 				8146A6C61A46DE2B00C2F9BC /* TabViewController.swift in Sources */,
 				8125C4901AA9DB6C00046197 /* ActionPerformer.swift in Sources */,
 				8120F27B19FFB2E200C02DF8 /* Float.swift in Sources */,
 				81DBE59B1AF779AA00F93483 /* HTMLEncoding.m in Sources */,
+				81FC49431B2EEF610006D8E8 /* ForumFragmentBase.swift in Sources */,
 				8120F28319FFB2E200C02DF8 /* Sequence.swift in Sources */,
 				81A49A8F19F0FCC0007FEA4C /* HTMLSelector.m in Sources */,
 				815793251AA0BD2E00C62E87 /* DulfyViewController.swift in Sources */,
@@ -1766,6 +1808,7 @@
 				8138BACC1AB030000045A93E /* DulfyActionTests.swift in Sources */,
 				81C228A519F1340C00EEF2C6 /* NSURLComponentsEx.swift in Sources */,
 				81255D8F19F7BBD600E0C018 /* UIImageView+WebCache.m in Sources */,
+				81FC49461B2EEFA80006D8E8 /* ForumFragmentText.swift in Sources */,
 				8157932C1AA0BD9700C62E87 /* WebViewEx.swift in Sources */,
 				81103E9C1AA2614300822A3B /* PushManagerTests.swift in Sources */,
 				81DD07E61AA32A7200278130 /* ActionSheetDelegate.swift in Sources */,
@@ -1829,6 +1872,7 @@
 				8146BF061ABC9B9E002DB6D3 /* ForumPostCollectionViewCell.swift in Sources */,
 				8147C8FB19F161EC00D98C61 /* ForumParser.swift in Sources */,
 				818029D81A08C7F000999871 /* NSURLComponentsExTests.swift in Sources */,
+				81FC49401B2EEF370006D8E8 /* ForumFragmentType.swift in Sources */,
 				8125C4931AA9DBB000046197 /* Action.swift in Sources */,
 				81C070B11ABB010E00B70A06 /* ForumListCollectionViewController.swift in Sources */,
 				81AB24A919EFC21100293D26 /* ForumCategory.swift in Sources */,
