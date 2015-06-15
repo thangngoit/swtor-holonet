@@ -81,11 +81,13 @@ class ForumParser {
         if node != nil {
             let fragmentParser = ForumFragmentParser()
             let fragments = fragmentParser.fragmentsForNode(node!)
+            println()
+            println()
             for fragment in fragments {
                 println(fragment)
             }
             
-            return self.getPostText(node!)
+            return ""// self.getPostText(node!)
         }
         return nil
     }

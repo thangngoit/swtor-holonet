@@ -13,52 +13,63 @@ class ForumFragmentParser {
     let quoteClass = "quote"
     let spoilerClass = "spoiler"
     
+    private var buffer = Array<ForumFragmentBase>()
+    
     // MARK: - Public methods
     
     func fragmentsForNode(node: HTMLNode) -> Array<ForumFragmentBase> {
-        var fragments = Array<ForumFragmentBase>()
-        
+        self.buffer = Array<ForumFragmentBase>()
+        self.internalFragmentsForNode(node)
+        return self.buffer
+    }
+    
+    // MARK: - Private methods
+    
+    private func internalFragmentsForNode(node: HTMLNode) {
         if let element = node as? HTMLElement {
             // Node is an element
             
             if element.hasClass(quoteClass) {
                 // Quote
-                fragments.append(self.quoteFragmentForElement(element))
-                return fragments
+                self.buffer.append(self.quoteFragmentForElement(element))
+                return
             } else if element.hasClass(spoilerClass) {
                 // Spoiler
-                fragments.append(self.spoilerFragmentForElement(element))
-                return fragments
+                self.buffer.append(self.spoilerFragmentForElement(element))
+                return
             } else if element.tagName == "br" {
                 // Line break
-                fragments.append(self.lineBreakFragmentForElement(element))
+                self.buffer.append(self.lineBreakFragmentForElement(element))
             }
         }
         
         if node.children.count == 0 {
             // Leaf node
             if let text = self.textFragmentForNode(node) {
-                fragments.append(text)
+                if let lastFragment = self.buffer.last as? ForumFragmentText {
+                    // Last fragment is also a text fragment, concat this one to it
+                    lastFragment.concat(text)
+                } else {
+                    // Last fragment is not a text fragment, append this one
+                    self.buffer.append(text)
+                }
             }
         } else {
             // Node has children, continue down the tree
             for child in node.children {
                 if let childNode = child as? HTMLNode {
-                    fragments.extend(self.fragmentsForNode(childNode))
+                    self.internalFragmentsForNode(childNode)
                 }
             }
         }
-        
-        return fragments
     }
-    
-    // MARK: - Private methods
 
     private func quoteFragmentForElement(element: HTMLElement) -> ForumFragmentQuote {
         let title = element.firstNodeMatchingSelector(".\(quoteClass)-header")?.textContent ?? ""
         let body = element.firstNodeMatchingSelector(".\(quoteClass)-body")
         
-        let bodyFragments = self.fragmentsForNode(body)
+        let parser = ForumFragmentParser()
+        let bodyFragments = parser.fragmentsForNode(body)
         
         return ForumFragmentQuote(title: title.stripNewLinesAndTabs().trimSpaces().collapseMultipleSpaces(), body: bodyFragments)
     }
@@ -66,7 +77,8 @@ class ForumFragmentParser {
     private func spoilerFragmentForElement(element: HTMLElement) -> ForumFragmentSpoiler {
         let body = element.firstNodeMatchingSelector(".\(spoilerClass)-body")
         
-        let bodyFragments = self.fragmentsForNode(body)
+        let parser = ForumFragmentParser()
+        let bodyFragments = parser.fragmentsForNode(body)
         
         return ForumFragmentSpoiler(body: bodyFragments)
     }

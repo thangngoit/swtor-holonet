@@ -10,21 +10,23 @@ import UIKit
 
 class ForumFragmentText: ForumFragmentBase {
    
-    let value: String
-    let isBold: Bool
-    let isItalic: Bool
-    let isUnderline: Bool
+    private var internalValue: String
+    
+    var value: String {
+        return self.internalValue
+    }
     
     override var description: String {
         return "TEXT: \(self.value)"
     }
     
-    init(value: String, isBold: Bool = false, isItalic: Bool = false, isUnderline: Bool = false) {
-        self.value = value
-        self.isBold = isBold
-        self.isItalic = isItalic
-        self.isUnderline = isUnderline
+    init(value: String) {
+        self.internalValue = value
         super.init(type: .Text)
+    }
+    
+    func concat(fragment: ForumFragmentText) {
+        self.internalValue = "\(self.internalValue) \(fragment.value)"
     }
     
 }
