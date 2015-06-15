@@ -333,6 +333,8 @@
 		81FC494F1B2EF7430006D8E8 /* ForumFragmentSpoiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC494D1B2EF7430006D8E8 /* ForumFragmentSpoiler.swift */; };
 		81FC49511B2EF9A30006D8E8 /* ForumFragmentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC49501B2EF9A30006D8E8 /* ForumFragmentParser.swift */; };
 		81FC49521B2EF9A30006D8E8 /* ForumFragmentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC49501B2EF9A30006D8E8 /* ForumFragmentParser.swift */; };
+		81FC49541B2F0B130006D8E8 /* ForumFragmentLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC49531B2F0B130006D8E8 /* ForumFragmentLink.swift */; };
+		81FC49551B2F0B130006D8E8 /* ForumFragmentLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC49531B2F0B130006D8E8 /* ForumFragmentLink.swift */; };
 		81FDCC8C1A6EC37900E2C44A /* Disclaimer.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81FDCC891A6EC37900E2C44A /* Disclaimer.txt */; };
 		81FDCC8D1A6EC37900E2C44A /* Disclaimer.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81FDCC891A6EC37900E2C44A /* Disclaimer.txt */; };
 		81FDCC8E1A6EC37900E2C44A /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81FDCC8A1A6EC37900E2C44A /* License.txt */; };
@@ -641,6 +643,7 @@
 		81FC494A1B2EF1130006D8E8 /* ForumFragmentLineBreak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumFragmentLineBreak.swift; path = Module/Forum/Model/Fragments/ForumFragmentLineBreak.swift; sourceTree = "<group>"; };
 		81FC494D1B2EF7430006D8E8 /* ForumFragmentSpoiler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumFragmentSpoiler.swift; path = Module/Forum/Model/Fragments/ForumFragmentSpoiler.swift; sourceTree = "<group>"; };
 		81FC49501B2EF9A30006D8E8 /* ForumFragmentParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumFragmentParser.swift; path = Module/Forum/Data/ForumFragmentParser.swift; sourceTree = "<group>"; };
+		81FC49531B2F0B130006D8E8 /* ForumFragmentLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumFragmentLink.swift; path = Module/Forum/Model/Fragments/ForumFragmentLink.swift; sourceTree = "<group>"; };
 		81FDCC891A6EC37900E2C44A /* Disclaimer.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Disclaimer.txt; path = Resource/Disclaimer.txt; sourceTree = "<group>"; };
 		81FDCC8A1A6EC37900E2C44A /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = License.txt; path = Resource/License.txt; sourceTree = "<group>"; };
 		81FDCC8B1A6EC37900E2C44A /* PrivacyPolicy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PrivacyPolicy.txt; path = Resource/PrivacyPolicy.txt; sourceTree = "<group>"; };
@@ -1423,6 +1426,7 @@
 			children = (
 				81FC49411B2EEF610006D8E8 /* ForumFragmentBase.swift */,
 				81FC494A1B2EF1130006D8E8 /* ForumFragmentLineBreak.swift */,
+				81FC49531B2F0B130006D8E8 /* ForumFragmentLink.swift */,
 				81FC49471B2EF0A80006D8E8 /* ForumFragmentQuote.swift */,
 				81FC494D1B2EF7430006D8E8 /* ForumFragmentSpoiler.swift */,
 				81FC49441B2EEFA80006D8E8 /* ForumFragmentText.swift */,
@@ -1736,6 +1740,7 @@
 				815793281AA0BD6400C62E87 /* WebViewProtocol.swift in Sources */,
 				81DD07DE1AA3299500278130 /* DelegateBase.swift in Sources */,
 				81AB24C919EFCAC000293D26 /* AFHTTPRequestOperationManager.m in Sources */,
+				81FC49541B2F0B130006D8E8 /* ForumFragmentLink.swift in Sources */,
 				81AB24DD19EFD2CE00293D26 /* ForumLanguage.swift in Sources */,
 				81DD07E11AA3299500278130 /* TestAlert.swift in Sources */,
 				8120F27419FFB2E200C02DF8 /* Dictionary.swift in Sources */,
@@ -1816,6 +1821,7 @@
 				81FC49461B2EEFA80006D8E8 /* ForumFragmentText.swift in Sources */,
 				8157932C1AA0BD9700C62E87 /* WebViewEx.swift in Sources */,
 				81103E9C1AA2614300822A3B /* PushManagerTests.swift in Sources */,
+				81FC49551B2F0B130006D8E8 /* ForumFragmentLink.swift in Sources */,
 				81DD07E61AA32A7200278130 /* ActionSheetDelegate.swift in Sources */,
 				81AB24CA19EFCAC000293D26 /* AFHTTPRequestOperationManager.m in Sources */,
 				815793291AA0BD6400C62E87 /* WebViewProtocol.swift in Sources */,

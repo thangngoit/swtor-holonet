@@ -40,6 +40,12 @@ class ForumFragmentParser {
             } else if element.tagName == "br" {
                 // Line break
                 self.buffer.append(self.lineBreakFragmentForElement(element))
+            } else if element.tagName == "a" {
+                // Link
+                if let link = self.linkFragmentForElement(element) {
+                    self.buffer.append(link)
+                    return
+                }
             }
         }
         
@@ -85,6 +91,13 @@ class ForumFragmentParser {
     
     private func lineBreakFragmentForElement(element: HTMLElement) -> ForumFragmentLineBreak {
         return ForumFragmentLineBreak()
+    }
+    
+    private func linkFragmentForElement(element: HTMLElement) -> ForumFragmentLink? {
+        let url = element.objectForKeyedSubscript("href") as? String
+        let text = element.textContent
+        
+        return url != nil ? ForumFragmentLink(url: url!, text: text) : nil
     }
     
     private func textFragmentForNode(node: HTMLNode) -> ForumFragmentText? {
