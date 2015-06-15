@@ -331,6 +331,8 @@
 		81FC494C1B2EF1130006D8E8 /* ForumFragmentLineBreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC494A1B2EF1130006D8E8 /* ForumFragmentLineBreak.swift */; };
 		81FC494E1B2EF7430006D8E8 /* ForumFragmentSpoiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC494D1B2EF7430006D8E8 /* ForumFragmentSpoiler.swift */; };
 		81FC494F1B2EF7430006D8E8 /* ForumFragmentSpoiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC494D1B2EF7430006D8E8 /* ForumFragmentSpoiler.swift */; };
+		81FC49511B2EF9A30006D8E8 /* ForumFragmentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC49501B2EF9A30006D8E8 /* ForumFragmentParser.swift */; };
+		81FC49521B2EF9A30006D8E8 /* ForumFragmentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC49501B2EF9A30006D8E8 /* ForumFragmentParser.swift */; };
 		81FDCC8C1A6EC37900E2C44A /* Disclaimer.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81FDCC891A6EC37900E2C44A /* Disclaimer.txt */; };
 		81FDCC8D1A6EC37900E2C44A /* Disclaimer.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81FDCC891A6EC37900E2C44A /* Disclaimer.txt */; };
 		81FDCC8E1A6EC37900E2C44A /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81FDCC8A1A6EC37900E2C44A /* License.txt */; };
@@ -638,6 +640,7 @@
 		81FC49471B2EF0A80006D8E8 /* ForumFragmentQuote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumFragmentQuote.swift; path = Module/Forum/Model/Fragments/ForumFragmentQuote.swift; sourceTree = "<group>"; };
 		81FC494A1B2EF1130006D8E8 /* ForumFragmentLineBreak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumFragmentLineBreak.swift; path = Module/Forum/Model/Fragments/ForumFragmentLineBreak.swift; sourceTree = "<group>"; };
 		81FC494D1B2EF7430006D8E8 /* ForumFragmentSpoiler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumFragmentSpoiler.swift; path = Module/Forum/Model/Fragments/ForumFragmentSpoiler.swift; sourceTree = "<group>"; };
+		81FC49501B2EF9A30006D8E8 /* ForumFragmentParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumFragmentParser.swift; path = Module/Forum/Data/ForumFragmentParser.swift; sourceTree = "<group>"; };
 		81FDCC891A6EC37900E2C44A /* Disclaimer.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Disclaimer.txt; path = Resource/Disclaimer.txt; sourceTree = "<group>"; };
 		81FDCC8A1A6EC37900E2C44A /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = License.txt; path = Resource/License.txt; sourceTree = "<group>"; };
 		81FDCC8B1A6EC37900E2C44A /* PrivacyPolicy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PrivacyPolicy.txt; path = Resource/PrivacyPolicy.txt; sourceTree = "<group>"; };
@@ -1200,10 +1203,11 @@
 		81AB24A519EFC19100293D26 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				8147C8F919F161EC00D98C61 /* ForumParser.swift */,
 				81AB24D919EFD21700293D26 /* ForumCategoryRepository.swift */,
-				8147C8F619F154F400D98C61 /* ForumThreadRepository.swift */,
+				81FC49501B2EF9A30006D8E8 /* ForumFragmentParser.swift */,
+				8147C8F919F161EC00D98C61 /* ForumParser.swift */,
 				815B211519F3A2B900B9E725 /* ForumPostRepository.swift */,
+				8147C8F619F154F400D98C61 /* ForumThreadRepository.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -1694,6 +1698,7 @@
 				81C228A919F146C500EEF2C6 /* StringEx.swift in Sources */,
 				81A49A9219F0FCC0007FEA4C /* HTMLString.m in Sources */,
 				81255D7819F7BBD600E0C018 /* SDWebImageCompat.m in Sources */,
+				81FC49511B2EF9A30006D8E8 /* ForumFragmentParser.swift in Sources */,
 				81AB24D519EFCAC000293D26 /* AFURLResponseSerialization.m in Sources */,
 				81255D8619F7BBD600E0C018 /* UIImage+GIF.m in Sources */,
 				81255D8C19F7BBD600E0C018 /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -1817,6 +1822,7 @@
 				81C228AA19F146C500EEF2C6 /* StringEx.swift in Sources */,
 				81A49A8119F0FCC0007FEA4C /* HTMLDocumentType.m in Sources */,
 				81A49A9919F0FCC0007FEA4C /* HTMLTreeEnumerator.m in Sources */,
+				81FC49521B2EF9A30006D8E8 /* ForumFragmentParser.swift in Sources */,
 				817A216C19F6C61E0093ECE3 /* Settings.swift in Sources */,
 				81A49A9B19F0FCC0007FEA4C /* NSString+HTMLEntities.m in Sources */,
 				81AA500A1A42C7EF009ECE33 /* InstanceHolder.swift in Sources */,

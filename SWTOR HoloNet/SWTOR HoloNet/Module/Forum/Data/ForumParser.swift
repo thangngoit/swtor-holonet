@@ -79,9 +79,10 @@ class ForumParser {
     
     func postText(#node: HTMLNode?) -> String? {
         if node != nil {
-            let tokens = self.getPostTokens(node!)
-            for token in tokens {
-                println(token)
+            let fragmentParser = ForumFragmentParser()
+            let fragments = fragmentParser.fragmentsForNode(node!)
+            for fragment in fragments {
+                println(fragment)
             }
             
             return self.getPostText(node!)
@@ -90,55 +91,6 @@ class ForumParser {
     }
     
     // MARK: - Private methods
-    
-    private func getPostTokens(node: HTMLNode) -> Array<ForumFragmentBase> {
-        var data = Array<ForumFragmentBase>()
-        
-        if let element = node as? HTMLElement {
-            if element.tagName == "br" {
-                data.append(ForumFragmentLineBreak())
-            } else if element.tagName == "b" {
-                
-            } else if element.tagName == "i" {
-                
-            } else if element.tagName == "u" {
-                
-            } else if element.hasClass("quote") {
-                let title = element.firstNodeMatchingSelector(".quote-header")?.textContent
-                let body = element.firstNodeMatchingSelector(".quote-body")
-                
-                let quoteFragments = self.getPostTokens(body)
-                data.append(ForumFragmentQuote(title: title!.stripNewLinesAndTabs().trimSpaces().collapseMultipleSpaces(), body: quoteFragments))
-                
-                return data
-            } else if element.hasClass("spoiler") {
-                let body = element.firstNodeMatchingSelector(".spoiler-body")
-                
-                let quoteFragments = self.getPostTokens(body)
-                data.append(ForumFragmentSpoiler(body: quoteFragments))
-                
-                return data
-            }
-        }
-        
-        if node.children.count == 0 {
-            let text = node.textContent.stripNewLinesAndTabs().trimSpaces().collapseMultipleSpaces()
-            if !text.isEmpty {
-                data.append(ForumFragmentText(value: text))
-            }
-        }
-        
-        if node.children.count > 0 {
-            for child in node.children {
-                let tokens = self.getPostTokens(child as! HTMLNode)
-                for token in tokens {
-                    data.append(token)
-                }
-            }
-        }
-        
-        return data
-    }
     
     private func getPostText(node: HTMLNode) -> String {
         // Leaf node
