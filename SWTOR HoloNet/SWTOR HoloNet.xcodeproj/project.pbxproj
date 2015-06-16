@@ -154,6 +154,8 @@
 		815B211719F3A2B900B9E725 /* ForumPostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815B211519F3A2B900B9E725 /* ForumPostRepository.swift */; };
 		816385BF1B301CE0007E4BB5 /* ForumFragmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816385BE1B301CE0007E4BB5 /* ForumFragmentView.swift */; };
 		816385C01B3021A7007E4BB5 /* ForumFragmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816385BE1B301CE0007E4BB5 /* ForumFragmentView.swift */; };
+		816385C31B306E9F007E4BB5 /* ForumFragmentTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816385C21B306E9F007E4BB5 /* ForumFragmentTextView.swift */; };
+		816385C81B3070A3007E4BB5 /* ForumFragmentTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816385C21B306E9F007E4BB5 /* ForumFragmentTextView.swift */; };
 		816567201A40394F002AA53A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8165671F1A40394F002AA53A /* Theme.swift */; };
 		816567211A40394F002AA53A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8165671F1A40394F002AA53A /* Theme.swift */; };
 		816A7F2E1A0B8FCE0005F1A1 /* forum-empty.html in Resources */ = {isa = PBXBuildFile; fileRef = 816A7F2D1A0B8FCE0005F1A1 /* forum-empty.html */; };
@@ -510,6 +512,7 @@
 		8157932A1AA0BD9700C62E87 /* WebViewEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewEx.swift; path = Module/Dulfy/WebView/WebViewEx.swift; sourceTree = "<group>"; };
 		815B211519F3A2B900B9E725 /* ForumPostRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumPostRepository.swift; path = Module/Forum/Data/ForumPostRepository.swift; sourceTree = "<group>"; };
 		816385BE1B301CE0007E4BB5 /* ForumFragmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumFragmentView.swift; path = Module/Forum/UI/Fragments/ForumFragmentView.swift; sourceTree = "<group>"; };
+		816385C21B306E9F007E4BB5 /* ForumFragmentTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumFragmentTextView.swift; path = Module/Forum/UI/Fragments/ForumFragmentTextView.swift; sourceTree = "<group>"; };
 		8165671F1A40394F002AA53A /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = Module/App/Model/Theme.swift; sourceTree = "<group>"; };
 		816A7F2D1A0B8FCE0005F1A1 /* forum-empty.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "forum-empty.html"; path = "Module/Forum/Test Data/forum-empty.html"; sourceTree = "<group>"; };
 		8175F1F31A497A6C00FC8011 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -994,6 +997,7 @@
 			isa = PBXGroup;
 			children = (
 				816385BE1B301CE0007E4BB5 /* ForumFragmentView.swift */,
+				816385C21B306E9F007E4BB5 /* ForumFragmentTextView.swift */,
 			);
 			name = Fragments;
 			sourceTree = "<group>";
@@ -1676,6 +1680,7 @@
 				810D2E041A44457800FF0FEF /* SettingsTableViewController.swift in Sources */,
 				8120F27E19FFB2E200C02DF8 /* NSArray.swift in Sources */,
 				81FC493F1B2EEF370006D8E8 /* ForumFragmentType.swift in Sources */,
+				816385C31B306E9F007E4BB5 /* ForumFragmentTextView.swift in Sources */,
 				81AA50091A42C7EF009ECE33 /* InstanceHolder.swift in Sources */,
 				81A49A9819F0FCC0007FEA4C /* HTMLTreeEnumerator.m in Sources */,
 				81DD07DF1AA3299500278130 /* Alert.swift in Sources */,
@@ -1790,6 +1795,7 @@
 				81DD07FF1AA32AE600278130 /* TestAlertTests.swift in Sources */,
 				81DD07FB1AA32AE600278130 /* AlertDelegateTests.swift in Sources */,
 				8138BACA1AB02D2A0045A93E /* ActionFactoryTests.swift in Sources */,
+				816385C81B3070A3007E4BB5 /* ForumFragmentTextView.swift in Sources */,
 				81A49A8519F0FCC0007FEA4C /* HTMLEntities.m in Sources */,
 				81255D7F19F7BBD600E0C018 /* SDWebImageDownloaderOperation.m in Sources */,
 				81FC494F1B2EF7430006D8E8 /* ForumFragmentSpoiler.swift in Sources */,

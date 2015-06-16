@@ -28,6 +28,8 @@ class Theme {
     let instructionsIconBackground: UIColor
     let instructionsFrame: UIColor
     
+    let contentFont: UIFont
+    
     let activityIndicatorStyle: UIActivityIndicatorViewStyle
     let scrollViewIndicatorStyle: UIScrollViewIndicatorStyle
     
@@ -49,6 +51,8 @@ class Theme {
         self.instructionsIcon = UIColor.blackColor()
         self.instructionsIconBackground = UIColor.whiteColor()
         self.instructionsFrame = UIColor.grayColor()
+        
+        self.contentFont = UIFont.systemFontOfSize(14.0)
         
         self.activityIndicatorStyle = UIActivityIndicatorViewStyle.White
         self.scrollViewIndicatorStyle = UIScrollViewIndicatorStyle.White

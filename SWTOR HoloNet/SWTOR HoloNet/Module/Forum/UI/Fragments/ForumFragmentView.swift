@@ -10,6 +10,8 @@ import UIKit
 
 class ForumFragmentView: UIView, Themeable {
 
+    private var theme: Theme?
+    
     var fragments: Array<ForumFragmentBase>?
     var maxSize: CGFloat = 9999.0
     
@@ -37,7 +39,7 @@ class ForumFragmentView: UIView, Themeable {
             
             if fragment.type == .LineBreak {
                 y += 10.0
-            } else if let label = view as? UILabel {
+            } else if let label = view as? ForumFragmentTextView {
                 label.preferredMaxLayoutWidth = width
                 label.frame = CGRectMake(x, y, width, remainingSpace)
                 label.sizeToFit()
@@ -51,31 +53,49 @@ class ForumFragmentView: UIView, Themeable {
     }
     
     func applyTheme(theme: Theme) {
+        self.theme = theme
+        
         self.backgroundColor = UIColor.clearColor()
-    }
-    
-    private func viewForFragment(fragment: ForumFragmentBase) -> UIView {
-        switch fragment.type {
-        case .Text:
-            return viewForTextFragment(fragment as! ForumFragmentText)
-        case .LineBreak:
-            return UIView()
-        case .Link:
-            return UIView()
-        case .Quote:
-            return UIView()
-        case .Spoiler:
-            return UIView()
+        for subview in self.subviews {
+            if let themeable = subview as? Themeable {
+                themeable.applyTheme(theme)
+            }
         }
     }
     
-    private func viewForTextFragment(fragment: ForumFragmentText) -> UILabel {
-        let view = UILabel()
-        view.textColor = UIColor.whiteColor()
-        view.text = fragment.value
-        view.lineBreakMode = .ByWordWrapping
-        view.numberOfLines = 0
+    private func viewForFragment(fragment: ForumFragmentBase) -> UIView {
+        let view: UIView
+        
+        switch fragment.type {
+        case .Text:
+            view = viewForTextFragment(fragment as! ForumFragmentText)
+        case .LineBreak:
+            view = UIView()
+        case .Link:
+            view = UIView()
+        case .Quote:
+            view = UIView()
+        case .Spoiler:
+            view = UIView()
+        }
+        
+        if let themeable = view as? Themeable {
+            if let theme = self.theme {
+                themeable.applyTheme(theme)
+            }
+        }
+        
         return view
+    }
+    
+    private func viewForTextFragment(fragment: ForumFragmentText) -> ForumFragmentTextView {
+        let view = ForumFragmentTextView()
+        view.text = fragment.value
+        return view
+    }
+    
+    private func viewForLinkFragment(fragment: ForumFragmentLink) -> UIButton {
+        return UIButton()
     }
 
 }
