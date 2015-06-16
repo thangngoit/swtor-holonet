@@ -101,7 +101,8 @@ class ForumPostRepository {
         }
         
         // Text
-        let text = self.parser.postText(node: element.firstNodeMatchingSelector(".post .forumPadding > .resultText"))
+        let bodyParser = ForumFragmentParser()
+        let body = bodyParser.fragmentsForNode(element.firstNodeMatchingSelector(".post .forumPadding > .resultText"))
         
         // Signature
         let lastPostRow = (element.nodesMatchingSelector(".post tr") as! Array<HTMLElement>).last
@@ -110,11 +111,10 @@ class ForumPostRepository {
         if id == nil { return nil }
         if username == nil { return nil }
         if date == nil { return nil }
-        if text == nil { return nil }
         
         let finalUsername = username!.stripNewLinesAndTabs().trimSpaces().collapseMultipleSpaces()
         
-        let post = ForumPost(id: id!, username: finalUsername, date: date!, postNumber: postNumber, isBiowarePost: isBiowarePost, text: text!)
+        let post = ForumPost(id: id!, username: finalUsername, date: date!, postNumber: postNumber, isBiowarePost: isBiowarePost, body: body)
         post.avatarUrl = avatarUrl
         post.signature = signature
         

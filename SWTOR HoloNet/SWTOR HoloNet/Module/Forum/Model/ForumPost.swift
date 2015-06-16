@@ -17,17 +17,17 @@ class ForumPost: Entity {
     var date: String
     var postNumber: Int?
     var isBiowarePost: Bool
-    var text: String
+    var body: Array<ForumFragmentBase>
     var signature: String?
     
     // MARK: - Init
     
-    init(id: Int, username: String, date: String, postNumber: Int?, isBiowarePost: Bool, text: String) {
+    init(id: Int, username: String, date: String, postNumber: Int?, isBiowarePost: Bool, body: Array<ForumFragmentBase>) {
         self.username = username
         self.date = date
         self.postNumber = postNumber
         self.isBiowarePost = isBiowarePost
-        self.text = text
+        self.body = body
         super.init(id: id)
     }
    

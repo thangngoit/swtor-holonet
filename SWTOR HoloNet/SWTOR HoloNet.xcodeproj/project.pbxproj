@@ -152,6 +152,8 @@
 		8157932C1AA0BD9700C62E87 /* WebViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8157932A1AA0BD9700C62E87 /* WebViewEx.swift */; };
 		815B211619F3A2B900B9E725 /* ForumPostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815B211519F3A2B900B9E725 /* ForumPostRepository.swift */; };
 		815B211719F3A2B900B9E725 /* ForumPostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815B211519F3A2B900B9E725 /* ForumPostRepository.swift */; };
+		816385BF1B301CE0007E4BB5 /* ForumFragmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816385BE1B301CE0007E4BB5 /* ForumFragmentView.swift */; };
+		816385C01B3021A7007E4BB5 /* ForumFragmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816385BE1B301CE0007E4BB5 /* ForumFragmentView.swift */; };
 		816567201A40394F002AA53A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8165671F1A40394F002AA53A /* Theme.swift */; };
 		816567211A40394F002AA53A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8165671F1A40394F002AA53A /* Theme.swift */; };
 		816A7F2E1A0B8FCE0005F1A1 /* forum-empty.html in Resources */ = {isa = PBXBuildFile; fileRef = 816A7F2D1A0B8FCE0005F1A1 /* forum-empty.html */; };
@@ -507,6 +509,7 @@
 		815793271AA0BD6400C62E87 /* WebViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewProtocol.swift; path = Module/Dulfy/WebView/WebViewProtocol.swift; sourceTree = "<group>"; };
 		8157932A1AA0BD9700C62E87 /* WebViewEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewEx.swift; path = Module/Dulfy/WebView/WebViewEx.swift; sourceTree = "<group>"; };
 		815B211519F3A2B900B9E725 /* ForumPostRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumPostRepository.swift; path = Module/Forum/Data/ForumPostRepository.swift; sourceTree = "<group>"; };
+		816385BE1B301CE0007E4BB5 /* ForumFragmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumFragmentView.swift; path = Module/Forum/UI/Fragments/ForumFragmentView.swift; sourceTree = "<group>"; };
 		8165671F1A40394F002AA53A /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = Module/App/Model/Theme.swift; sourceTree = "<group>"; };
 		816A7F2D1A0B8FCE0005F1A1 /* forum-empty.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "forum-empty.html"; path = "Module/Forum/Test Data/forum-empty.html"; sourceTree = "<group>"; };
 		8175F1F31A497A6C00FC8011 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -987,6 +990,14 @@
 			name = WebView;
 			sourceTree = "<group>";
 		};
+		816385B91B301A7F007E4BB5 /* Fragments */ = {
+			isa = PBXGroup;
+			children = (
+				816385BE1B301CE0007E4BB5 /* ForumFragmentView.swift */,
+			);
+			name = Fragments;
+			sourceTree = "<group>";
+		};
 		816A7F2C1A0B8F770005F1A1 /* Test Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -1001,6 +1012,7 @@
 		8177E50419F7827600CF2B4B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				816385B91B301A7F007E4BB5 /* Fragments */,
 				8146BF0F1ABCABF6002DB6D3 /* CollectionReusableView */,
 				813E284B1AB9ACCF007B723D /* CollectionViewCell */,
 				81C070B21ABB016800B70A06 /* ForumBaseCollectionViewController.swift */,
@@ -1693,6 +1705,7 @@
 				8120F27819FFB2E200C02DF8 /* ExSwift.swift in Sources */,
 				81DD07E01AA3299500278130 /* AlertFactory.swift in Sources */,
 				81255D7E19F7BBD600E0C018 /* SDWebImageDownloaderOperation.m in Sources */,
+				816385BF1B301CE0007E4BB5 /* ForumFragmentView.swift in Sources */,
 				8146BF181ABCACAD002DB6D3 /* ForumThreadHeaderCollectionReusableView.swift in Sources */,
 				81A49A9419F0FCC0007FEA4C /* HTMLTextNode.m in Sources */,
 				8146A6C51A46DE2B00C2F9BC /* TabViewController.swift in Sources */,
@@ -1764,6 +1777,7 @@
 				81846C9D1ABC451500982C2C /* TableHeaderCollectionReusableView.swift in Sources */,
 				81255D7D19F7BBD600E0C018 /* SDWebImageDownloader.m in Sources */,
 				81255D8B19F7BBD600E0C018 /* UIImage+WebP.m in Sources */,
+				816385C01B3021A7007E4BB5 /* ForumFragmentView.swift in Sources */,
 				81FC494C1B2EF1130006D8E8 /* ForumFragmentLineBreak.swift in Sources */,
 				81DD07FC1AA32AE600278130 /* DelegateBaseTests.swift in Sources */,
 				81FB846F1AF90A2F00D51684 /* HTMLElement.swift in Sources */,

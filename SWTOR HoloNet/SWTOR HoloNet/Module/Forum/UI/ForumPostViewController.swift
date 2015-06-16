@@ -25,7 +25,7 @@ class ForumPostViewController: UIViewController, Injectable, Themeable {
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var usernameLabel: UILabel!
     @IBOutlet var devImageView: UIImageView!
-    @IBOutlet var textTextView: UITextView!
+    @IBOutlet var bodyView: ForumFragmentView!
     
     // MARK: - Lifecycle
     
@@ -53,7 +53,8 @@ class ForumPostViewController: UIViewController, Injectable, Themeable {
         
         self.dateLabel.text = self.post.postNumber != nil ? "\(self.post.date) | #\(self.post.postNumber!)" : self.post.date
         self.usernameLabel.text = post.username
-        self.textTextView.text = post.text
+        self.bodyView.fragments = post.body
+        //self.textTextView.text = post.text
         
         self.applyTheme(self.theme)
         
@@ -64,8 +65,8 @@ class ForumPostViewController: UIViewController, Injectable, Themeable {
     }
     
     override func viewDidLayoutSubviews() {
-        self.textTextView.textContainerInset = UIEdgeInsetsMake(8, 8, self.bottomLayoutGuide.length + 8, 8)
-        self.textTextView.setContentOffset(CGPointZero, animated: false)
+//        self.textTextView.textContainerInset = UIEdgeInsetsMake(8, 8, self.bottomLayoutGuide.length + 8, 8)
+//        self.textTextView.setContentOffset(CGPointZero, animated: false)
         
         super.viewDidLayoutSubviews()
     }
@@ -76,7 +77,8 @@ class ForumPostViewController: UIViewController, Injectable, Themeable {
         self.view.backgroundColor = theme.contentBackground
         self.dateLabel.textColor = theme.contentText
         self.usernameLabel.textColor = theme.contentText
-        self.textTextView.textColor = post.isBiowarePost ? self.theme.contentHighlightText : self.theme.contentText
+        self.bodyView.applyTheme(theme)
+//        self.textTextView.textColor = post.isBiowarePost ? self.theme.contentHighlightText : self.theme.contentText
     }
 
 }
