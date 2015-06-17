@@ -94,33 +94,55 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ab2-mk-JDN" customClass="ForumFragmentView" customModule="HoloNet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="129" width="600" height="471"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8L-nf-GzZ">
+                                <rect key="frame" x="0.0" y="129" width="600" height="422"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kZc-xg-W0p" customClass="ForumFragmentView" customModule="HoloNet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="422"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="600" placeholder="YES" id="3Em-Dq-CUE"/>
+                                            <constraint firstAttribute="height" constant="422" placeholder="YES" id="YhM-wB-Z4O"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kZc-xg-W0p" firstAttribute="top" secondItem="H8L-nf-GzZ" secondAttribute="top" id="Ng3-NX-er1"/>
+                                    <constraint firstAttribute="trailing" secondItem="kZc-xg-W0p" secondAttribute="trailing" id="Oa9-ok-Grj"/>
+                                    <constraint firstItem="kZc-xg-W0p" firstAttribute="leading" secondItem="H8L-nf-GzZ" secondAttribute="leading" id="avR-EH-Uj7"/>
+                                    <constraint firstAttribute="bottom" secondItem="kZc-xg-W0p" secondAttribute="bottom" id="hVo-So-vbW"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4bk-Ro-HNn" firstAttribute="leading" secondItem="2fz-qc-V4i" secondAttribute="trailing" constant="15" id="0RQ-Hs-c8C"/>
-                            <constraint firstAttribute="bottom" secondItem="ab2-mk-JDN" secondAttribute="bottom" id="AiP-fe-vlE"/>
+                            <constraint firstAttribute="bottom" secondItem="H8L-nf-GzZ" secondAttribute="bottom" id="1U6-d8-0Oe"/>
+                            <constraint firstItem="Eh5-nm-n0N" firstAttribute="top" secondItem="H8L-nf-GzZ" secondAttribute="bottom" id="4S2-QD-QBp"/>
+                            <constraint firstAttribute="trailing" secondItem="H8L-nf-GzZ" secondAttribute="trailing" id="5Wy-jh-4RN"/>
                             <constraint firstItem="d27-A5-r0c" firstAttribute="top" secondItem="2MN-Ti-qtQ" secondAttribute="bottom" constant="12" id="Ht1-Ic-QAf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4bk-Ro-HNn" secondAttribute="trailing" constant="15" id="MAS-29-B26"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Jz6-VT-2QC" secondAttribute="trailing" id="NWv-Mw-XLb"/>
-                            <constraint firstItem="ab2-mk-JDN" firstAttribute="top" secondItem="2fz-qc-V4i" secondAttribute="bottom" constant="8" id="P0Z-UN-aFN"/>
                             <constraint firstItem="4bk-Ro-HNn" firstAttribute="top" secondItem="d27-A5-r0c" secondAttribute="bottom" constant="8" id="SZV-K1-lWi"/>
-                            <constraint firstItem="ab2-mk-JDN" firstAttribute="leading" secondItem="VLe-kt-2qD" secondAttribute="leading" id="Vv8-sE-j4Z"/>
                             <constraint firstItem="2fz-qc-V4i" firstAttribute="leading" secondItem="VLe-kt-2qD" secondAttribute="leadingMargin" id="ZTn-Sw-LoV"/>
                             <constraint firstItem="d27-A5-r0c" firstAttribute="leading" secondItem="2fz-qc-V4i" secondAttribute="trailing" constant="15" id="aCv-8d-P2P"/>
                             <constraint firstItem="Jz6-VT-2QC" firstAttribute="top" secondItem="2MN-Ti-qtQ" secondAttribute="bottom" constant="12" id="aNi-11-Pai"/>
-                            <constraint firstAttribute="trailing" secondItem="ab2-mk-JDN" secondAttribute="trailing" id="lUO-uL-VwS"/>
+                            <constraint firstItem="H8L-nf-GzZ" firstAttribute="leading" secondItem="VLe-kt-2qD" secondAttribute="leading" id="j3r-b4-BVU"/>
                             <constraint firstItem="Jz6-VT-2QC" firstAttribute="leading" secondItem="d27-A5-r0c" secondAttribute="trailing" constant="15" id="qNm-Z9-GxZ"/>
+                            <constraint firstItem="H8L-nf-GzZ" firstAttribute="top" secondItem="2fz-qc-V4i" secondAttribute="bottom" constant="8" id="t38-s6-6G0"/>
                             <constraint firstItem="2fz-qc-V4i" firstAttribute="top" secondItem="2MN-Ti-qtQ" secondAttribute="bottom" constant="12" id="tcX-Ig-ogv"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1U6-d8-0Oe"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Post" id="PX0-og-yid"/>
                     <connections>
                         <outlet property="avatarImageView" destination="2fz-qc-V4i" id="VfE-JE-vV9"/>
-                        <outlet property="bodyView" destination="ab2-mk-JDN" id="wt0-yc-1aB"/>
+                        <outlet property="bodyScrollView" destination="H8L-nf-GzZ" id="6Ir-r7-jZb"/>
+                        <outlet property="bodyView" destination="kZc-xg-W0p" id="cZY-Uv-kFW"/>
                         <outlet property="dateLabel" destination="d27-A5-r0c" id="eyK-ea-Rb8"/>
                         <outlet property="devImageView" destination="Jz6-VT-2QC" id="LeN-VE-R4Y"/>
                         <outlet property="usernameLabel" destination="4bk-Ro-HNn" id="Xsn-UQ-adn"/>

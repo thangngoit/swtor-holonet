@@ -25,6 +25,7 @@ class ForumPostViewController: UIViewController, Injectable, Themeable {
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var usernameLabel: UILabel!
     @IBOutlet var devImageView: UIImageView!
+    @IBOutlet var bodyScrollView: UIScrollView!
     @IBOutlet var bodyView: ForumFragmentView!
     
     // MARK: - Lifecycle
@@ -53,8 +54,10 @@ class ForumPostViewController: UIViewController, Injectable, Themeable {
         
         self.dateLabel.text = self.post.postNumber != nil ? "\(self.post.date) | #\(self.post.postNumber!)" : self.post.date
         self.usernameLabel.text = post.username
+        
         self.bodyView.fragments = post.body
-        //self.textTextView.text = post.text
+        self.bodyView.layout(self.bodyScrollView.frame.size)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "bodyHeightChanged:", name: ForumFragmentViewHeightChanged, object: self.bodyView)
         
         self.applyTheme(self.theme)
         
@@ -64,11 +67,52 @@ class ForumPostViewController: UIViewController, Injectable, Themeable {
 #endif
     }
     
-    override func viewDidLayoutSubviews() {
-//        self.textTextView.textContainerInset = UIEdgeInsetsMake(8, 8, self.bottomLayoutGuide.length + 8, 8)
-//        self.textTextView.setContentOffset(CGPointZero, animated: false)
+    // MARK: - Orientation change
+    
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        self.transitionToSize(size)
+        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+    }
+    
+    override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
+        let viewSize = self.view.frame.size
+        let newSize = CGSizeMake(viewSize.height, viewSize.width)
         
-        super.viewDidLayoutSubviews()
+        self.transitionToSize(newSize)
+        super.willRotateToInterfaceOrientation(toInterfaceOrientation, duration: duration)
+    }
+    
+    private func transitionToSize(size: CGSize) {
+        // Fade out -> in the body view for smooth transition when scrolling is necessary
+        self.bodyView.alpha = 0
+        UIView.animateWithDuration(0.5) {
+            self.bodyView.alpha = 1
+        }
+        
+        self.bodyView.layout(size)
+    }
+    
+    // MARK: - Body height change
+    
+    func bodyHeightChanged(notification: NSNotification) {
+        if let userInfo = notification.userInfo {
+            // Get the old and new height value
+            let old = userInfo["old"] as! CGFloat
+            let new = userInfo["new"] as! CGFloat
+            
+            if old == 0 { return }
+            if old == new { return }
+            
+            // Calculate the ratio of new:old value
+            let ratio = new/old
+            
+            // New scroll position should be the same in %
+            let current = self.bodyScrollView.contentOffset.y
+            let scrollTo = CGRectMake(0.0, floor(current * ratio), self.bodyScrollView.frame.size.width, self.bodyScrollView.frame.size.height)
+            
+            // Finally trigger scrolling
+            self.bodyScrollView.scrollRectToVisible(scrollTo, animated: false)
+        }
     }
     
     // MARK: - Themeable
@@ -77,8 +121,8 @@ class ForumPostViewController: UIViewController, Injectable, Themeable {
         self.view.backgroundColor = theme.contentBackground
         self.dateLabel.textColor = theme.contentText
         self.usernameLabel.textColor = theme.contentText
+        self.bodyScrollView.indicatorStyle = theme.scrollViewIndicatorStyle
         self.bodyView.applyTheme(theme)
-//        self.textTextView.textColor = post.isBiowarePost ? self.theme.contentHighlightText : self.theme.contentText
     }
 
 }

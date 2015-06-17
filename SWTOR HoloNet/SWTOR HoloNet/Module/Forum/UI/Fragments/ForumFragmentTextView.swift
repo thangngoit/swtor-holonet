@@ -16,18 +16,21 @@ class ForumFragmentTextView: UILabel, Themeable {
         super.init(frame: CGRectZero)
         
         self.lineBreakMode = .ByWordWrapping
+        self.numberOfLines = 0
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         self.lineBreakMode = .ByWordWrapping
+        self.numberOfLines = 0
     }
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         self.lineBreakMode = .ByWordWrapping
+        self.numberOfLines = 0
     }
     
     // MARK: - Themeable
