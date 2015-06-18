@@ -56,7 +56,7 @@ class ForumPostViewController: UIViewController, Injectable, Themeable {
         self.usernameLabel.text = post.username
         
         self.bodyView.fragments = post.body
-        self.bodyView.layout(self.bodyScrollView.frame.size)
+        self.bodyView.layout(self.view.frame.size)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "bodyHeightChanged:", name: ForumFragmentViewHeightChanged, object: self.bodyView)
         
         self.applyTheme(self.theme)

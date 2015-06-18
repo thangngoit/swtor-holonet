@@ -213,6 +213,8 @@
 		81A49A9919F0FCC0007FEA4C /* HTMLTreeEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A49A7919F0FCC0007FEA4C /* HTMLTreeEnumerator.m */; };
 		81A49A9A19F0FCC0007FEA4C /* NSString+HTMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A49A7B19F0FCC0007FEA4C /* NSString+HTMLEntities.m */; };
 		81A49A9B19F0FCC0007FEA4C /* NSString+HTMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A49A7B19F0FCC0007FEA4C /* NSString+HTMLEntities.m */; };
+		81A7F9FC1B31BD3C0054FABA /* ForumFragmentLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7F9FB1B31BD3C0054FABA /* ForumFragmentLinkView.swift */; };
+		81A7F9FD1B31BD3C0054FABA /* ForumFragmentLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A7F9FB1B31BD3C0054FABA /* ForumFragmentLinkView.swift */; };
 		81AA50091A42C7EF009ECE33 /* InstanceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA50081A42C7EF009ECE33 /* InstanceHolder.swift */; };
 		81AA500A1A42C7EF009ECE33 /* InstanceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AA50081A42C7EF009ECE33 /* InstanceHolder.swift */; };
 		81AB248219EFBD7700293D26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AB248119EFBD7700293D26 /* AppDelegate.swift */; };
@@ -565,6 +567,7 @@
 		81A49A7919F0FCC0007FEA4C /* HTMLTreeEnumerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTMLTreeEnumerator.m; path = "../Third Party/HTMLReader/Code/HTMLTreeEnumerator.m"; sourceTree = "<group>"; };
 		81A49A7A19F0FCC0007FEA4C /* NSString+HTMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+HTMLEntities.h"; path = "../Third Party/HTMLReader/Code/NSString+HTMLEntities.h"; sourceTree = "<group>"; };
 		81A49A7B19F0FCC0007FEA4C /* NSString+HTMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+HTMLEntities.m"; path = "../Third Party/HTMLReader/Code/NSString+HTMLEntities.m"; sourceTree = "<group>"; };
+		81A7F9FB1B31BD3C0054FABA /* ForumFragmentLinkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForumFragmentLinkView.swift; path = Module/Forum/UI/Fragments/ForumFragmentLinkView.swift; sourceTree = "<group>"; };
 		81AA50081A42C7EF009ECE33 /* InstanceHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstanceHolder.swift; sourceTree = "<group>"; };
 		81AB247C19EFBD7700293D26 /* HoloNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoloNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB248019EFBD7700293D26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -996,8 +999,9 @@
 		816385B91B301A7F007E4BB5 /* Fragments */ = {
 			isa = PBXGroup;
 			children = (
-				816385BE1B301CE0007E4BB5 /* ForumFragmentView.swift */,
+				81A7F9FB1B31BD3C0054FABA /* ForumFragmentLinkView.swift */,
 				816385C21B306E9F007E4BB5 /* ForumFragmentTextView.swift */,
+				816385BE1B301CE0007E4BB5 /* ForumFragmentView.swift */,
 			);
 			name = Fragments;
 			sourceTree = "<group>";
@@ -1656,6 +1660,7 @@
 				8125C48F1AA9DB6C00046197 /* ActionPerformer.swift in Sources */,
 				81DD07DB1AA3299500278130 /* AlertIOS8.swift in Sources */,
 				81C38F311A42B4E400A8E1D2 /* Injectable.swift in Sources */,
+				81A7F9FC1B31BD3C0054FABA /* ForumFragmentLinkView.swift in Sources */,
 				81964D8B1AAED73D008CA544 /* ActionParser.swift in Sources */,
 				8157932B1AA0BD9700C62E87 /* WebViewEx.swift in Sources */,
 				81AB24D119EFCAC000293D26 /* AFURLConnectionOperation.m in Sources */,
@@ -1776,6 +1781,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81A7F9FD1B31BD3C0054FABA /* ForumFragmentLinkView.swift in Sources */,
 				81255D8919F7BBD600E0C018 /* UIImage+MultiFormat.m in Sources */,
 				814F07411AADECF5009BD5F1 /* ActionFactory.swift in Sources */,
 				81DD07E71AA32A7200278130 /* AlertDelegate.swift in Sources */,

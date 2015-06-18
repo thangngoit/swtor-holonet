@@ -84,13 +84,20 @@ class ForumFragmentView: UIView, Themeable {
                 // Line break, just add some space
                 remainingSpace -= lineBreakSize
                 y += lineBreakSize
-            } else if let label = view as? ForumFragmentTextView {
+            } else if let text = view as? ForumFragmentTextView {
                 // Text, size the view
-                label.frame = CGRectMake(x, y, width, remainingSpace)
-                label.sizeToFit()
+                text.frame = CGRectMake(x, y, width, remainingSpace)
+                text.sizeToFit()
                 
-                remainingSpace -= label.frame.size.height
-                y += label.frame.size.height
+                remainingSpace -= text.frame.size.height
+                y += text.frame.size.height
+            } else if let link = view as? ForumFragmentLinkView {
+                // Link, size the view
+                link.frame = CGRectMake(x, y, width, remainingSpace)
+                link.sizeToFit()
+                
+                remainingSpace -= link.frame.size.height
+                y += link.frame.size.height
             }
             
             index++
@@ -134,7 +141,7 @@ class ForumFragmentView: UIView, Themeable {
         case .LineBreak:
             view = UIView()
         case .Link:
-            view = UIView()
+            view = viewForLinkFragment(fragment as! ForumFragmentLink)
         case .Quote:
             view = UIView()
         case .Spoiler:
@@ -157,7 +164,10 @@ class ForumFragmentView: UIView, Themeable {
     }
     
     private func viewForLinkFragment(fragment: ForumFragmentLink) -> UIButton {
-        return UIButton()
+        let view = ForumFragmentLinkView()
+        view.setTitle(fragment.text, forState: .Normal)
+        view.url = NSURL(string: fragment.url)
+        return view
     }
 
 }
