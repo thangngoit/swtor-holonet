@@ -9,11 +9,6 @@
 import UIKit
 import XCTest
 
-@availability(iOS, deprecated=1.0, message="I'm not deprecated, please ***FIXME**")
-func FIXME()
-{
-}
-
 class ForumPostRepositoryTests: ForumRepositoryTestsBase {
 
     // MARK: - Properties

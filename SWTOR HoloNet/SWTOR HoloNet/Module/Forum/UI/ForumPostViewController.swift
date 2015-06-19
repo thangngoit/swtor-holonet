@@ -56,7 +56,7 @@ class ForumPostViewController: UIViewController, Injectable, Themeable {
         self.usernameLabel.text = post.username
         
         self.bodyView.fragments = post.body
-        self.bodyView.layout(self.view.frame.size)
+        self.bodyView.setWidth(self.view.frame.size.width)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "bodyHeightChanged:", name: ForumFragmentViewHeightChanged, object: self.bodyView)
         
         self.applyTheme(self.theme)
@@ -89,7 +89,7 @@ class ForumPostViewController: UIViewController, Injectable, Themeable {
             self.bodyView.alpha = 1
         }
         
-        self.bodyView.layout(size)
+        self.bodyView.setWidth(size.width)
     }
     
     // MARK: - Body height change

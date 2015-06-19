@@ -22,25 +22,18 @@ class ForumFragmentView: UIView, Themeable {
     
     var fragments: Array<ForumFragmentBase>?
     var maxSize: CGFloat = 99999.0
+    var padding: CGFloat = 10.0
     
     // MARK: - Public methods
     
-    func layout(size: CGSize) {
+    func setWidth(value: CGFloat) {
         // Create a width constraint if it does not exist yet
         if self.widthConstraint == nil {
             self.widthConstraint = NSLayoutConstraint(item: self, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 0.0)
             self.addConstraint(self.widthConstraint!)
         }
         
-        // Create a height constraint if it does not exist yet
-        if self.heightConstraint == nil {
-            self.heightConstraint = NSLayoutConstraint(item: self, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 0.0)
-            self.addConstraint(self.heightConstraint!)
-        }
-        
-        // Just set a value for the width constraint
-        // Height will be calculated when layouting subviews
-        self.widthConstraint!.constant = size.width
+        self.widthConstraint!.constant = value
         self.setNeedsLayout()
     }
     
@@ -56,12 +49,11 @@ class ForumFragmentView: UIView, Themeable {
             return
         }
         
-        let margin: CGFloat = 10.0
         let lineBreakSize: CGFloat = 10.0
         
-        let x: CGFloat = margin
-        var y: CGFloat = margin
-        let width: CGFloat = CGRectGetWidth(self.frame) - (2*margin)
+        let x: CGFloat = self.padding
+        var y: CGFloat = self.padding
+        let width: CGFloat = CGRectGetWidth(self.frame) - (2*self.padding)
         
         var remainingSpace: CGFloat = self.maxSize - y
         var index = 0
@@ -105,11 +97,17 @@ class ForumFragmentView: UIView, Themeable {
         
         // Store current and new height values so they can be notified to observers
         let oldHeight = self.frame.size.height
-        let newHeight = y + margin
+        let newHeight = y + self.padding
         
         // Disable layouting because we need to set the height of this view
         // which will trigger a new layout pass
         self.shouldLayout = false
+        
+        if self.heightConstraint == nil {
+            self.heightConstraint = NSLayoutConstraint(item: self, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 0.0)
+            self.addConstraint(self.heightConstraint!)
+        }
+        
         self.heightConstraint!.constant = newHeight
         
         // Notify observers that view height has changed

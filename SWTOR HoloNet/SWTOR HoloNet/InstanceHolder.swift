@@ -10,6 +10,11 @@
 //  after introducing proper dependency injection.
 //
 
+@availability(iOS, deprecated=1.0, message="I'm not deprecated, please ***FIXME**")
+func FIXME()
+{
+}
+
 import UIKit
 
 class InstanceHolder {
