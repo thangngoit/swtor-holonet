@@ -15,22 +15,33 @@ class ForumFragmentTextView: UILabel, Themeable {
     init() {
         super.init(frame: CGRectZero)
         
-        self.lineBreakMode = .ByWordWrapping
+        self.lineBreakMode = .ByTruncatingTail
         self.numberOfLines = 0
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.lineBreakMode = .ByWordWrapping
+        self.lineBreakMode = .ByTruncatingTail
         self.numberOfLines = 0
     }
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        self.lineBreakMode = .ByWordWrapping
+        self.lineBreakMode = .ByTruncatingTail
         self.numberOfLines = 0
+    }
+    
+    // MARK: - Public methods
+    
+    func sizeToFit(size: CGSize) {
+        self.sizeToFit()
+        
+        if self.frame.size.height > size.height {
+            // Too large, fit into remaining space
+            self.frame.size = size
+        }
     }
     
     // MARK: - Themeable

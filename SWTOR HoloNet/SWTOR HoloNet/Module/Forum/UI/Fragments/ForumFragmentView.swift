@@ -86,8 +86,8 @@ class ForumFragmentView: UIView, Themeable {
                 y += lineBreakSize
             } else if let text = view as? ForumFragmentTextView {
                 // Text, size the view
-                text.frame = CGRectMake(x, y, width, remainingSpace)
-                text.sizeToFit()
+                text.frame = CGRectMake(x, y, width, 0)
+                text.sizeToFit(CGSizeMake(width, remainingSpace))
                 
                 remainingSpace -= text.frame.size.height
                 y += text.frame.size.height
